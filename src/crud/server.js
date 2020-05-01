@@ -15,9 +15,6 @@ if(fs.existsSync(`${__dirname}/data/data.json`) && fs.existsSync(`${__dirname}/d
 
     users = fs.readFileSync(`${__dirname}/data/users.json`, 'utf8');
     users = JSON.parse(users);
-
-
-    // users.forEach(el => console.log(el))
 }
 else if(fs.existsSync(`${__dirname}/data/test-data.json`) && fs.existsSync(`${__dirname}/data/test-users.json`)) {
     data = fs.readFileSync(`${__dirname}/data/test-data.json`, 'utf8');
@@ -25,9 +22,6 @@ else if(fs.existsSync(`${__dirname}/data/test-data.json`) && fs.existsSync(`${__
 
     users = fs.readFileSync(`${__dirname}/data/test-users.json`, 'utf8');
     users = JSON.parse(users);
-
-
-    // users.forEach(el => console.log(el))
 }
 else {
     fs.appendFileSync(`${__dirname}/data/test-users.json`, '{}');
@@ -54,20 +48,5 @@ console.log(req.body);
     
 })
 
-app.listen(3000, () => console.log('on3000'));
+app.listen(3005, () => console.log('on3000'));
 
-
-// console.log(fs.existsSync(__dirname + '/data/data.json') && fs.existsSync(__dirname + '/data/users.json'))
-// console.log(fs.existsSync(__dirname + 'data/data.json'))
-// console.log(fs.existsSync(__dirname + '/data/data.json'))
-
-console.log(users)
-// const data = fs.readFileSync(__dirname + '/data.json');
-// fs.writeFileSync(__dirname + '/data.json', 'hi')
-// fs.writeFileSync(__dirname + '/data.json', data + 'hi')
-// fs.writeFileSync(__dirname + '/data.json', data + 'hi')
-// console.log(data);
-// fs.writeFileSync(__dirname + '/data.json', 'hi')
-// console.log(data);
-
-// fs.readFileSync('./data.json')
